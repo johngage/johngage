@@ -3,15 +3,40 @@
 <head>
     <title>John Gage's Personal Website</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        nav li {
+            display: inline;
+        }
+        
+        nav a {
+            display: inline-block;
+            padding: 10px;
+            background-color: gold;
+            color: black;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Berkeley Engineering in Kibera, Kenya. </h1>
-        <h4>Water, Food, Laundry, and Machine Learning Training in the largest slum in East Africa </h4>
+        <h1>Berkeley Engineering in Kibera, Kenya: Partnership for Development</h1>
+        <h4>Water, Food, Laundry, and Machine Learning Training in the largest slum in East Africa</h4>
     </header>
     <nav>
         <ul>
-            <li><a href="blog.html">Photonics on Silicon News</a></li>
+            <li><a href="blog.html">CyberPhysical News</a></li>
             <li><a href="drawings.html">Drawings</a></li>
             <li><a href="books.html">Books</a></li>
         </ul>
@@ -21,7 +46,6 @@
         <audio controls>
             <source src="music.mp3" type="audio/mpeg">
             <source src="music.m4a" type="audio/mp4">
-            Your browser does not support the audio element.
         </audio>
     </footer>
 </body>
