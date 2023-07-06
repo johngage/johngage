@@ -9,7 +9,7 @@
             var randomColor = colors[Math.floor(Math.random() * colors.length)];
             document.body.style.backgroundColor = randomColor;
         }
-        setInterval(changeColorScheme, 10000); // Change color every 30 seconds
+        setInterval(changeColorScheme, 30000); // Change color every 30 seconds
         
         function displayNextImage() {
             var images = document.getElementsByClassName("circle-image");
@@ -18,48 +18,4 @@
             images[0].dataset.index = nextIndex;
             images[0].src = "images/" + images[nextIndex].dataset.filename;
         }
-        setInterval(displayNextImage, 2000); // Change image every 2 seconds
-    </script>
-    <style>
-        /* ... Existing styles ... */
-    </style>
-</head>
-<body>
-    <!-- ... Existing HTML elements ... -->
-
-    <div id="circle-container">
-        <div class="circle">
-            <img src="images/svg1.svg" width="100%" height="100%" class="circle-image" data-index="0" data-filename="svg1.svg" />
-        </div>
-        <div class="circle">
-            <img src="images/svg2.svg" width="100%" height="100%" class="circle-image" data-index="1" data-filename="svg2.svg" />
-        </div>
-    </div>
-    
-    <!-- ... Remaining HTML elements ... -->
-    
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var imageContainer = document.getElementById("circle-container");
-            var imageFiles = [];
-            fetch("images/")
-                .then(response => response.text())
-                .then(data => {
-                    var parser = new DOMParser();
-                    var html = parser.parseFromString(data, 'text/html');
-                    var links = html.querySelectorAll("a[href]");
-                    for (var i = 0; i < links.length; i++) {
-                        var filename = links[i].getAttribute("href");
-                        if (filename.endsWith(".svg")) {
-                            imageFiles.push(filename);
-                        }
-                    }
-                    var circleImages = document.getElementsByClassName("circle-image");
-                    for (var j = 0; j < circleImages.length; j++) {
-                        circleImages[j].dataset.filename = imageFiles[j % imageFiles.length];
-                    }
-                });
-        });
-    </script>
-</body>
-</html>
+        setInterval
