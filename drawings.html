@@ -5,11 +5,11 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script>
         function changeColorScheme() {
-            var colors = ["red", "green", "blue", "orange", "purple"];
+            var colors = ["red", "green", "blue", "orange", "purple", "yellow"];
             var randomColor = colors[Math.floor(Math.random() * colors.length)];
             document.body.style.backgroundColor = randomColor;
         }
-        setInterval(changeColorScheme, 30000); // Change color every 30 seconds
+        setInterval(changeColorScheme, 10000); // Change color every 30 seconds
         
         function displayNextImage() {
             var images = document.getElementsByClassName("circle-image");
